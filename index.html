@@ -10,38 +10,6 @@
 	<center><h1>Elmside Championship 2020</h1>
 
 	<img src= "ElmsideLogo_2020_2.png">
-
-	<script>
-	// Set the date we're counting down to
-	var countDownDate = new Date("Jun 6, 2020 20:00:00").getTime();
-
-	// Update the count down every 1 second
-	var x = setInterval(function() {
-
-	  // Get today's date and time
-	  var now = new Date().getTime();
-		
-	  // Find the distance between now and the count down date
-	  var distance = countDownDate - now;
-		
-	  // Time calculations for days, hours, minutes and seconds
-	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-		
-	  // Output the result in an element with id="demo"
-	  document.getElementById("Timer").innerHTML = days + "d " + hours + "h "
-	  + minutes + "m " + seconds + "s ";
-		
-	  // If the count down is over, write some text 
-	  if (distance < 0) {
-		clearInterval(x);
-		document.getElementById("Timer").innerHTML = "EXPIRED";
-	  }
-	}, 1000);
-	</script>
-	
 	
 	<h1><p id="Timer"></p></h1>
 	
@@ -49,17 +17,53 @@
 	wow so you've arrived at the 
 	<b><u>official elmside championship website</u></b>, 
 	thats super dope. <br><br> 
-	<hr>
-	So how are you feeling for this year? Ready to grab the trophy? There's some <a href= "https://www.facebook.com/conor.cronin.14" target="_blank">tough competition</a> but I think you might win 
-	<i>(don't tell the others I said this though)</i>.
-	<br>
-	<hr>
-	I Bet you're craving some Elmside content and just can't wait for that mysterious timer to count down.
-	Why not go to the <a href= "https://www.reddit.com/r/Elmsides/" target="_blank">official Elmies subreddit</a> and 
-	<a href= "https://elmside.fandom.com/wiki/Elmside_Wiki?fbclid=IwAR3lGMyWdLBdMzBCmSG26QW8PohhrSEPaTEpVnuDiJjxe2BmKoBwisLmD0Y" target="_blank"> 
-	fan wiki page</a> to tide you over.
 	</p>
+	
+
+<form>
+    <label for="pswd">Enter your password: </label>
+    <input type="password" id="pswd">
+    <input type="button" value="Submit" onclick="checkPswd();" />
+</form>
+<!--Function to check password the already set password is admin-->
 	</center>
+	
+	
+ 
+	
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "123";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+alert(`You cracked the code!
+You now have to collect as many of the items below and return back before the timer is up. 
+Points will be awarded for every item collected and for the best in each category  - 
+
+A picture of one of you in a tree (+ 20)
+A picture of you both enjoying a drink together (+ 10) 
+Some tasty mayo (+ 10)
+An untasty beverage (+ 10)
+Picture of a blue plaque (+ 20)
+Picture of some graffiti (+ 10)
+
+Get a photo at the following locations -
+Penis Saloon (+ 30)
+nonself dildo (+ 30)
+slowhand quadrilateral (+ 30)
+Empty, Charlie can eat cooked sea creature (+30)
+regal NYE (+ 30)
+
+Good luck!`)
+        }
+        else{
+            alert("Passwords do not match.");
+        }
+    }
+	
+</script>
+
+
 
 </body>
 </html>
